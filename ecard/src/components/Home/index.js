@@ -69,9 +69,15 @@ export default class  Home extends Component{
     // Share.share((resulet)=>{
     //   console.log(resulet);
     // })
-    let data ={table:"adv",fields:"*",condition:[{"field":"AD_ID","sign":"=","value":"0"}]}
+    // let data ={table:"adv",fields:"*",condition:[{"field":"AD_ID","sign":"=","value":"0"}]}
+    // let sdata = {type:"fetch",curd:{table:"adv",fields:"*",condition:[{field:"AD_ID",sign:"=",value:"0"}]}}
+    // let data ={list:[sdata,sdata]}
+    let update = {curd:"update",data:{table:"adv",fields:[{field:"AD_TITLE",value:"修改标题"}],condition:[{field:"AD_ID",sign:"=",value:"0"}]}}
+    let fetch= {curd:"fetch",data:{table:"adv",fields:"AD_ID,AD_TITLE",condition:[{field:"AD_ID",sign:"=",value:"0"}]}}
+    let data = {list:[update,fetch]}
+
     Api.api({
-      api:"curd/fetch",
+      api:"curd/curdSet",
       data:data,
       success:(result)=>{
         console.log(result);
@@ -97,21 +103,22 @@ export default class  Home extends Component{
 }
   render() {
      return (
-       <View >
+       <ScrollView >
 
           <Header onPress={()=>{this._onPress()}}/>
 
+          <View style={{backgroundColor:'#fff',paddingTop:11}}>
+            <Carousel
+              data={this.state.entries}
+              renderItem={this._renderItem}
+              sliderWidth={WIDTH}
+              itemWidth={310}
+              hasParallaxImages={true}
+            />
+        </View>
 
-          <Carousel
-            data={this.state.entries}
-            renderItem={this._renderItem}
-            sliderWidth={WIDTH}
-            itemWidth={329.5}
-            hasParallaxImages={true}
-        />
 
-
-       </View>
+       </ScrollView>
      );
    }
 }

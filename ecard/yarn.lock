@@ -4357,11 +4357,27 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
+react-native-gesture-password@^0.3.2:
+  version "0.3.2"
+  resolved "http://registry.npm.taobao.org/react-native-gesture-password/download/react-native-gesture-password-0.3.2.tgz#dbb837d1d911d289893768fbd08ad30a127aa399"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-smart-button@^2.0.4-beta.1:
+  version "2.0.4-beta.1"
+  resolved "http://registry.npm.taobao.org/react-native-smart-button/download/react-native-smart-button-2.0.4-beta.1.tgz#32625154b3133c40f8c95d0c3a95c9447d2eea27"
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-smart-gesture-password@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/react-native-smart-gesture-password/download/react-native-smart-gesture-password-2.1.0.tgz#02808146c8e2d326e663afeb6bc9236418fc1a7c"
 
 react-native-snap-carousel@^3.7.0:
   version "3.7.0"
